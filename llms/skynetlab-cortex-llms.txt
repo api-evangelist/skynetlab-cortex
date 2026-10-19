@@ -1,0 +1,40 @@
+# Cortex by SKYNETLAB
+
+> Hosted semantic memory that any AI connects to over MCP. Every write passes a quality gate that rejects what it recognises as already known, up to 99% of duplicates, contradictions are tracked instead of overwritten, and answers cite their sources.
+
+Cortex is memory infrastructure, not a model. It lives alongside the assistants you already use (ChatGPT, Claude, or any MCP-capable client) and holds what they learn, so switching model does not mean starting from zero.
+
+What makes it different is what it refuses. Most memory layers store everything and degrade: retrieval gets worse as near-duplicate notes pile up. Cortex classifies every write before persisting it, and one of four things happens:
+
+- **Accepted**: the information is new and is stored.
+- **Corroborated**: it is already known, so instead of creating a duplicate the existing memory's corroboration counter and trust score go up.
+- **Contradicted**: it clashes with an existing memory; both are kept and the conflict is flagged as a first-class object, never silently overwritten.
+- **Rejected**: it adds nothing. It is not stored, and it is not billed. On material the memory already holds this is the most common outcome, up to 99%.
+
+Rejection is synchronous and explained: the write call returns the verdict, the reason, and the ID and similarity of the nearest existing memory. A lightweight reject log (metadata only, no payloads, 30-day retention) is queryable so the rate can be audited.
+
+Built by Filippo Pilotta, independent researcher and founder of SKYNETLAB (Bergamo, Italy). Patent pending, Italian Patent Office (UIBM) filing 102026000014026 of 15 May 2026; trademark 302026000119239.
+
+## Product
+
+- [Home](https://skynetlab-cortex.com/): what Cortex is, the quality gate in live numbers, and how it fits the AI tools you already use.
+- [Use cases](https://skynetlab-cortex.com/casi-uso): concrete scenarios where a shared, model-independent memory changes the outcome.
+- [Pricing and plans](https://skynetlab-cortex.com/abbonamenti): plans and the free trial.
+- [Connect to Claude](https://skynetlab-cortex.com/claude): step-by-step MCP setup, roughly two minutes.
+- [cortex-memory skill](https://skynetlab-cortex.com/skill): usage instructions to give your AI so it knows when to read from and write to Cortex.
+- [FAQ](https://skynetlab-cortex.com/faq): common questions about setup, data handling, and behaviour.
+- [Comparisons](https://skynetlab-cortex.com/confronti): Cortex versus Mem0, Zep and Graphiti, Letta, Supermemory, ChatGPT built-in memory, Claude built-in memory and do-it-yourself setups, with verifiable facts, sources and the cases where the alternative is the better choice.
+
+## Evidence
+
+- [Benchmark](https://skynetlab-cortex.com/benchmark): evaluation on LoCoMo (1,986 questions) with the full diary of measurement errors across four harness iterations, including the runs that produced numbers too good to be true. Strict J-score 55.8% with the gate active, 69.1% with full recall: the ~13-point gap is the cost of governance, quantified rather than hidden.
+- [Academic paper](https://skynetlab-cortex.com/paper): the Coherence Metric work behind the system. DOI 10.5281/zenodo.17825268.
+- [Patent](https://skynetlab-cortex.com/brevetto): filing details and scope.
+- [Sustainability](https://skynetlab-cortex.com/sostenibilita): why refusing most writes means less compute and less energy: the saving is a consequence of the filter, not a separate feature.
+
+## Optional
+
+- [AI transparency](https://skynetlab-cortex.com/trasparenza-ai): how AI is used in building and running this product.
+- [Contact](https://skynetlab-cortex.com/contatti): how to reach SKYNETLAB.
+- [Privacy policy](https://skynetlab-cortex.com/privacy)
+- [Legal notes](https://skynetlab-cortex.com/note-legali)

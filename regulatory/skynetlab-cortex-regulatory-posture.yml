@@ -1,0 +1,34 @@
+generated: '2026-10-19'
+method: searched
+source: https://skynetlab-cortex.com/sicurezza
+signals:
+  data_subject_request:
+    - source: https://skynetlab-cortex.com/sicurezza
+      http_status: 200
+      fetched: true
+      quote: "Closing your account: the account page offers Export my data, which downloads the entire content in readable form, and Delete account, which permanently removes account and memories."
+      note: Provides data export and deletion capabilities for users.
+  subprocessors:
+    - source: https://skynetlab-cortex.com/sicurezza
+      http_status: 200
+      fetched: true
+      quote: "Cortex non gira su hardware proprio. I sub-responsabili autorizzati sono quattro: Cloudflare, Inc. (hosting, database, rete, elaborazione AI del filtro), Stripe, Inc. (pagamenti; i dati della carta non transitano né sono conservati sui sistemi del servizio), Resend (invio delle email transazionali, ad esempio il link di accesso), Google LLC (solo se scegli di accedere con un account Google)."
+      note: Lists four authorized sub‑processors.
+  data_residency:
+    - source: https://skynetlab-cortex.com/sicurezza
+      http_status: 200
+      fetched: true
+      quote: "Il database primario che contiene account e memorie è attualmente collocato da Cloudflare nella regione «Eastern Europe». Va detto con precisione: quella regione è un'indicazione di collocazione, non un vincolo contrattuale di residenza dei dati, che si otterrebbe soltanto configurando il database con giurisdizione UE alla creazione."
+      note: Indicates data location hint, not contractual residency guarantee.
+  ai_transparency:
+    - source: https://skynetlab-cortex.com/trasparenza-ai
+      http_status: 200
+      fetched: true
+      quote: "Informativa sulla trasparenza dei contenuti e degli output generati da intelligenza artificiale, ai sensi dell'art. 50 del Regolamento (UE) 2024/1689."
+      note: Provides AI transparency notice as required by EU regulation.
+  data_retention:
+    - source: https://skynetlab-cortex.com/sicurezza
+      http_status: 200
+      fetched: true
+      quote: "Proposte rifiutate dal filtro: ne restano titolo e metadati tecnici (data, motivo, similarità) per 30 giorni. Il contenuto integrale non viene conservato."
+      note: Retains metadata for 30 days, not full content.

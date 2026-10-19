@@ -1,0 +1,59 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://skynetlab-cortex.com/abbonamenti
+sources:
+- https://skynetlab-cortex.com/abbonamenti
+name: SKYNETLAB pricing
+audience: business-product
+pricing_basis: flat-platform
+plans:
+- name: Free
+  price_text: 0 €
+  price: 0
+  description: Your first memory space. No subscription.
+  features:
+  - 50 total memories
+  - 1 project / brain
+  - Unlimited reads and searches
+  limits:
+  - name: Memory write cap
+    limit_text: 50 memories total
+- name: Pro
+  price_text: 9,99 €/ mese
+  price: 9.99
+  description: For professionals, researchers, founders.
+  features:
+  - 100 new memories per month
+  - Multiple projects
+  - Large semantic memory
+  - More agents / contexts
+  - Living encyclopedia and calibration
+  - Full control over your data
+  limits:
+  - name: Memory write cap
+    limit_text: 100 new memories per month (200 in first two months)
+- name: Pro+
+  price_text: 19,99 €/ mese
+  price: 19.99
+  description: For intensive Cortex usage.
+  features:
+  - 500 new memories per month
+  - Everything in Pro
+  - Larger memory volume
+  - Processing priority
+  - More projects and agents
+  limits:
+  - name: Memory write cap
+    limit_text: 500 new memories per month (1,000 in first two months)
+- name: Team / Enterprise
+  price_text: On request
+  description: For teams and organizations.
+  features:
+  - Custom volumes
+  - Dedicated data isolation
+  - White-label
+  - SLA and direct support
+  - Engine configuration
+  - Dedicated onboarding
+docs: https://skynetlab-cortex.com/abbonamenti

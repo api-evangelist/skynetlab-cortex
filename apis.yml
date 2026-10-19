@@ -1,24 +1,58 @@
 aid: skynetlab-cortex
+
 name: SKYNETLAB
-description: 'SKYNETLAB is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://skynetlab-cortex.com/assets/og-cortex.jpg
+
+description: SKYNETLAB offers Cortex, a patent‑pending semantic memory infrastructure that provides persistent, model‑independent AI context.
+  It enables AI systems to retain information across conversations, acting as a long‑term memory layer for large language models. Available as
+  a ChatGPT connector, Cortex aims to reduce forgetting in AI applications and improve continuity of user interactions.
+
 url: https://raw.githubusercontent.com/api-evangelist/skynetlab-cortex/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-19 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- AI
+- SemanticMemory
+- ChatGPTConnector
+- Infrastructure
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/skynetlab-cortex-plans-pricing.yml
+- type: Compliance
+  url: https://skynetlab-cortex.com/sicurezza
+- type: Security
+  url: security/skynetlab-cortex-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/skynetlab-cortex-llms.txt
+- type: Hosts
+  url: hosts/skynetlab-cortex-hosts.yml
+- type: Vendors
+  url: vendors/skynetlab-cortex-vendors.yml
+- type: PrivacyPolicy
+  url: https://skynetlab-cortex.com/privacy.html
+- type: Leadership
+  url: https://skynetlab-cortex.com/team
 - type: TrustCenter
   url: security/skynetlab-cortex-trust-center.yml
 - type: VulnerabilityDisclosure
@@ -27,3 +61,24 @@ common:
   url: security/skynetlab-cortex-domain-security.yml
 - type: Website
   url: https://skynetlab-cortex.com/
+
+apis:
+- name: Cortex
+  description: Cortex is a semantic memory infrastructure enabling AI models to retain context across conversations.
+  humanURL: https://skynetlab-cortex.com/abbonamenti
+  aid: skynetlab-cortex:cortex
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public API documentation or developer program is provided on the website.
+  evidence:
+  - url: https://skynetlab-cortex.com/abbonamenti.html
+    status: 200
+  checked: '2026-10-19'
+x-enrichment:
+  date: '2026-10-19'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

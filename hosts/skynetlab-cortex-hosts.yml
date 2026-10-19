@@ -26,10 +26,16 @@ hosts:
   - probed
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
+  - Compliance
+  - PrivacyPolicy
+  - Leadership
   - Website
   serves:
   - docs
+  - cdn
+  vendor: cloudflare
   registrable_domain: skynetlab-cortex.com
   role: website
   relation: own

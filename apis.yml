@@ -19,5 +19,11 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/skynetlab-cortex-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/skynetlab-cortex-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/skynetlab-cortex-domain-security.yml
 - type: Website
   url: https://skynetlab-cortex.com/
